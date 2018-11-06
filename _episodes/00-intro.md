@@ -183,7 +183,7 @@ dir.create("fig_output")
 ~~~
 {: .language-r}
 
-Go to the Fighare page for this curriculum, and download the dataset called "`SAFI_clean.csv`". The direct download link is: <https://ndownloader.figshare.com/files/11492171>. Place this downloaded file in the `data/` you just created. You can do this directly from R by copying and pasting this in your terminal (your instructor can place this chunk of code in the Etherpad):
+Go to the Fighare page for this curriculum, and download the dataset called "`SAFI_clean.csv`". The direct download link is: <https://ndownloader.figshare.com/files/11492171>. Place this downloaded file in the `data/` you just created. You can do this directly from R by copying and pasting the command below in the R console.
 
 
 ~~~
@@ -191,6 +191,17 @@ download.file("https://ndownloader.figshare.com/files/11492171",
               "data/SAFI_clean.csv", mode = "wb")
 ~~~
 {: .language-r}
+
+Except, when your instructor tried this, the URLs to figshare.com didn't work on campus wifi for unknown reasons. So, I've made a copy of the SAFI_clean.csv in our fork of this repository, and you can download the file using this command instead:
+~~~
+download.file("https://raw.githubusercontent.com/rltillett/r-socialsci/gh-pages/files/SAFI_clean.csv",
+              "data/SAFI_clean.csv", mode = "wb")
+~~~
+{: .language-r}
+
+
+**You could also download CSV, TSV, or Excel files any other way, and so long as you move copies of them into a directory you remember, you'll be able to subsequently load data from said files into an R script using `read_csv()` and related functions from the tidyverse.**
+
 
 ## Interacting with R
 
